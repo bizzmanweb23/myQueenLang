@@ -3,7 +3,7 @@
    <!-- Brand Logo -->
    <a href="" class="brand-link">
      <img src="{{asset('admin/logo-text.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-     <span class="brand-text font-weight-light">Visit Store</span>
+     <span class="brand-text font-weight-light">@lang('admin.Visit Store')</span>
    </a>
 
    <!-- Sidebar -->
@@ -19,7 +19,7 @@
                         class="nav-link  {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            @lang('admin.Dashboard')
                         </p>
                     </a>
                 </li>
@@ -28,14 +28,14 @@
                         class="nav-link {{ request()->routeIs('inventory.index') || request()->routeIs('product.create') || request()->routeIs('product.edit') ? 'active' : '' }}">
                         <img src="{{ asset('asset/image/icon/inventory.png') }}" alt="" width="30"
                             class="nav-icon">
-                        <p>Inventory</p>
+                        <p>@lang('admin.Inventory')</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('affilatemarketing.index') }}"
                         class="nav-link {{ request()->routeIs('admin.affilatemarketing.index') ? 'active' : '' }}">
                         <img src="{{ asset('asset/image/icon/mlm-logo.jpg')}}" alt="" width="30" class="nav-icon">
-                        <p>Affilate Marketing</p>
+                        <p>@lang('admin.Affilate Marketing')</p>
                     </a>
                 </li>
 				
@@ -43,7 +43,7 @@
            <a href="{{route('Users')}}" class="nav-link {{ request()->routeIs('users') ? 'active' : '' }}"> 
            <img src="{{ asset('admin/icon/man.png') }}" alt="" width="30" class="nav-icon">
              <p>
-               Users
+               @lang('admin.Users')
              </p>
            </a>
          </li>
@@ -51,7 +51,7 @@
                     <a href="{{ route('withdrawbonus.index') }}"
                         class="nav-link {{ request()->routeIs('admin.withdrawbonus.index') ? 'active' : '' }}">
                         <img src="{{ asset('asset/image/icon/withdraw.png')}}" alt="" width="30" class="nav-icon">
-                        <p>WithDraw Bonus</p>
+                        <p>@lang('admin.WithDraw Bonus')</p>
                     </a>
                 </li>
          <li class="nav-item">
@@ -59,7 +59,7 @@
                         class="nav-link {{ request()->routeIs('orders.index') || request()->routeIs('admin.show_order_details') ? 'active' : '' }}">
                         <img src="{{ asset('asset/image/icon/shopping-bag.png') }}" alt="" width="30"
                             class="nav-icon">
-                        <p>Orders</p>
+                        <p>@lang('admin.Orders')</p>
                     </a>
                 </li>
 
@@ -70,7 +70,7 @@
            <img src="{{ asset('admin/icon/charge.png') }}" alt="" width="30"
                             class="nav-icon">
              <p>
-               Shipping Charge
+               @lang('admin.Shipping Charge')
              </p>
            </a>
          </li>
@@ -78,20 +78,20 @@
            <a href="{{ route('View-Coupon') }}" class="nav-link {{ request()->routeIs('View-Coupon') ? 'active' : '' }}">
            <img src="{{ asset('admin/icon/coupon.png') }}" alt="" width="30"
                             class="nav-icon">
-             <p>Coupon</p>
+             <p>@lang('admin.Coupon')</p>
            </a>
          </li>
          <li class="nav-item">
            <a href="{{ route('View-Promotion') }}" class="nav-link {{ request()->routeIs('View-Promotion') ? 'active' : '' }}"> 
            <img src="{{ asset('admin/icon/promotion.png') }}" alt="" width="30"
                             class="nav-icon">
-             <p>Promotion</p>
+             <p>@lang('admin.Promotion')</p>
            </a>
          </li>
          <li class="nav-item">
            <a href="{{ route('View-Banner') }}" class="nav-link {{ request()->routeIs('banner') ? 'active' : '' }}">
            <img src="{{ asset('admin/icon/flag.png') }}" alt="" width="30" class="nav-icon">
-             <p>Banner</p>
+             <p>@lang('admin.Banner')</p>
            </a>
          </li>
          <!-- <ul class="nav nav-treeview">

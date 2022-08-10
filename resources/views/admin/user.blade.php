@@ -7,7 +7,7 @@
 			<div class="table-title">
 				<div class="row">
 					<div class="col-sm-6">
-						<h2><b>Users</b></h2>
+						<h2><b>@lang('admin.Users')</b></h2>
 					</div>
 				</div>
 			</div>
@@ -17,14 +17,14 @@
                                data-show-pagination-switch="true" data-search="true">               
 				            <thead>
 					            <tr>						         
-						                        <th style="width: 280px;">User ID</th>
-						                        <th style="width: 280px;">UserName</th>
-						                        <th style="width: 280px;">Contact Number</th>
-						                        <th style="width: 280px;">Gender</th>
-						                        <th style="width: 280px;">Total PV Points</th>
-						                        <th style="width: 280px;">Email Address</th>
-						                        <th style="width: 280px;">Ranking</th>
-						                        <th style="width: 280px;">Action</th>
+						                        <th style="width: 280px;">@lang('mlm.User ID')</th>
+						                        <th style="width: 280px;">@lang('wallet.User Name')</th>
+						                        <th style="width: 280px;">@lang('admin.Contact Number')</th>
+						                        <th style="width: 280px;">@lang('user.Gender')</th>
+						                        <th style="width: 280px;">@lang('admin.Total PV Points')</th>
+						                        <th style="width: 280px;">@lang('admin.Email Address')</th>
+						                        <th style="width: 280px;">@lang('user.Ranking')</th>
+						                        <th style="width: 280px;">@lang('admin.Action')</th>
 					          </tr>
 				            </thead>
 				                <tbody>
@@ -73,19 +73,19 @@
 				@csrf
                 <div class="row">
                     <div class="col-md-4">
-					    <label>User ID:</label>
+					    <label>@lang('mlm.User ID'):</label>
                         <input type="text" class="form-control form-control-user" id="user_id"
                                placeholder="User ID" value="" name="user_id">
 						<span id="first_name_error" style="color: red"></span>
                     </div>
                     <div class="col-md-4">
-						<label>Name:</label>
+						<label>@lang('user.Name'):</label>
                         <input type="text" class="form-control form-control-user" id="name"
                                placeholder="Name" value="" name="name">
 						<span id="first_name_error" style="color: red"></span>
                     </div>
 					<div class="col-md-4">
-						<label>Contact Number:</label>
+						<label>@lang('admin.Contact Number'):</label>
                         <input type="number" class="form-control form-control-user" id="contact_number"
                                placeholder="Contact Number" value="" name="contact_number">
 						<span id="address_error" style="color: red"></span>
@@ -93,22 +93,22 @@
                 </div>
 				<div class="row mt-2">
 				    <div class="col-md-4">
-						<label>Gender:</label>
+						<label>@lang('user.Gender'):</label>
                         <select name="gender" class="form-control form-control-user" id="gender" >
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>                                         
+                            <option value="Male">@lang('user.Male')</option>
+                            <option value="Female">@lang('user.Female')</option>
+                            <option value="Other">@lang('user.Other')</option>                                         
                         </select>
 						<span id="gender_error" style="color: red"></span>
                     </div>
                     <div class="col-md-4">
-						<label>Email Address:</label>
+						<label>@lang('admin.Email Address'):</label>
                         <input type="text" class="form-control form-control-user" id="email_id"
                                placeholder="Email Address" value="" name="email_id" >
 					    <span id="email_id_error" style="color: red"></span>
                     </div>
 					<div class="col-md-4">
-					    <label>Ranking:</label>
+					    <label>@lang('user.Ranking'):</label>
                         <input type="number" class="form-control form-control-user" id="ranking"
                                placeholder="Ranking" value="" name="ranking">
 						<span id="ranking_error" style="color: red"></span>
@@ -116,19 +116,19 @@
                 </div>
 				<div class="row mt-2">
 				    <div class="col-md-4">
-						<label>PV Points:</label>
+						<label>@lang('admin.Total PV Points'):</label>
                         <input type="number" class="form-control form-control-user" value="" id="pv_points"
                                placeholder="Enter your Email Address" name="pv_points">
 					    <span id="email_address_error" style="color: red"></span>
                     </div>
                     <div class="col-md-4">
-						<label>Matching Bonus:</label>
+						<label>@lang('mlm.bonus2'):</label>
                         <input type="number" class="form-control form-control-user" value="" id="matching_bonus"
                                placeholder="Matching Bonus" name="matching_bonus">
 					    <span id="matching_bonus_error" style="color: red"></span>
                     </div>
 					<div class="col-md-4">
-					    <label>Direct Bonus:</label>
+					    <label>@lang('mlm.bonus1'):</label>
                         <input type="number" class="form-control form-control-user" value="" id="direct_bonus"
                                placeholder="Direct Bonus" name="direct_bonus">
 					    <span id="direct_bonus_error" style="color: red"></span>
@@ -136,7 +136,7 @@
                 </div>
 				<div class="row mt-2">
 				    <div class="col-md-4">
-						<label>LeaderShip Bonus:</label>
+						<label>@lang('mlm.bonus3'):</label>
                         <input type="number" class="form-control form-control-user" value="" id="leadership_bonus"
                                placeholder="LeaderShip Bonus" name="leadership_bonus">
 					    <span id="leadership_bonus_error" style="color: red"></span>

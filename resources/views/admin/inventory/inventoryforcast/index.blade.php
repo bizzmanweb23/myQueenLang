@@ -4,10 +4,10 @@
     <thead>
         <tr>
             <th data-checkbox="true"></th>
-            <th data-field="id">ID</th>
-            <th data-field="image" data-formatter="forcastImage">Products Image</th>
-            <th data-field="productname">Products Name</th>
-            <th data-field="quantity">Quantity</th>
+            <th data-field="id">@lang('admin.ID')</th>
+            <th data-field="image" data-formatter="forcastImage">@lang('admin.Products Image')</th>
+            <th data-field="productname">@lang('admin.Products Name')</th>
+            <th data-field="quantity">@lang('admin.Quantity')</th>
         </tr>
     </thead>
     <tbody>

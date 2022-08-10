@@ -6,33 +6,33 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#add_warehouse" role="tab"
-                        aria-controls="home" aria-selected="true">Add Warehouse</a>
+                        aria-controls="home" aria-selected="true">@lang('admin.Add Warehouse')</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="warehouse_management-tab" data-toggle="tab" href="#warehouse_management"
-                        role="tab" aria-controls="profile" aria-selected="false">Warehouse Management</a>
+                        role="tab" aria-controls="profile" aria-selected="false">@lang('admin.Warehouse Management')</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="Return-tab" data-toggle="tab" href="#return" role="tab"
-                        aria-controls="contact" aria-selected="false">Return</a>
+                        aria-controls="contact" aria-selected="false">@lang('admin.Return')</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="category-tab" data-toggle="tab" href="#category" role="tab"
-                        aria-controls="category" aria-selected="false">Category</a>
+                        aria-controls="category" aria-selected="false">@lang('admin.Category')</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="forcast-tab" data-toggle="tab" href="#forcast" role="tab"
-                        aria-controls="forcast" aria-selected="false">Inventory Forcast</a>
+                        aria-controls="forcast" aria-selected="false">@lang('admin.Inventory Forcast')</a>
                 </li>
 
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="product-tab" data-toggle="tab" href="#product" role="tab"
-                        aria-controls="product" aria-selected="false">Products</a>
+                        aria-controls="product" aria-selected="false">@lang('admin.Products')</a>
                 </li>
 
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="table_branches" data-toggle="tab" href="#branches" role="tab"
-                        aria-controls="branches" aria-selected="false">Branches</a>
+                        aria-controls="branches" aria-selected="false">@lang('admin.Branches')</a>
                 </li>
             </ul>
             <div class="tab-content bg-white" id="myTabContent">
@@ -41,13 +41,11 @@
                         <div class="p-1">
                             <button type="button" class="btn btn-info add-new" data-toggle="modal"
                                 data-target="#add_warehouse_modal" onclick="add_ware_house()"><i class="fa fa-plus"></i>
-                                Add
-                                Warehouse</button>
+                                @lang('admin.Add Warehouse')</button>
                         </div>
                         <div class="p-1">
                             <button type="button" class="btn btn-info add-new" data-toggle="modal"
-                                data-target="#add_rack_modal" onclick="addRack()"><i class="fa fa-plus"></i> Add
-                                Rack</button>
+                                data-target="#add_rack_modal" onclick="addRack()"><i class="fa fa-plus"></i> @lang('admin.Add Rack')</button>
                         </div>
                     </div>
                     @include('admin.inventory.warehouse.index')
@@ -57,8 +55,7 @@
                     <div class="row">
                         <div class="p-1">
                             <button type="button" class="btn btn-info add-new" data-toggle="modal"
-                                data-target="#add_warehouse_stock" onclick="getData()"><i class="fa fa-plus"></i> Add
-                                Stock</button>
+                                data-target="#add_warehouse_stock" onclick="getData()"><i class="fa fa-plus"></i> @lang('admin.Add Stock')</button>
                         </div>
                     </div>
                     @include('admin.inventory.warehouse.addStock')
@@ -67,8 +64,7 @@
                     <div class="row">
                         <div class="p-1">
                             <button type="button" class="btn btn-info add-new" data-toggle="modal"
-                                data-target="#add_return_modal" onclick="getReturnData()"><i class="fa fa-plus"></i> Add
-                                Return</button>
+                                data-target="#add_return_modal" onclick="getReturnData()"><i class="fa fa-plus"></i> @lang('admin.Add Return')</button>
                         </div>
                     </div>
                     @include('admin.inventory.return.index')
@@ -79,8 +75,7 @@
                         <div class="p-1">
                             <button type="button" class="btn btn-info add-new" data-toggle="modal"
                                 data-target="#add_category_modal" onclick="add_category()"><i class="fa fa-plus"></i>
-                                Add
-                                Category</button>
+                                @lang('admin.Add Category')</button>
                         </div>
                     </div>
                     @include('admin.inventory.category.index')
@@ -94,8 +89,7 @@
                 <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
                     <div class="p-1">
                         <a class="btn btn-info add-new" href="{{ route('product.create') }}"><i
-                                class="fa fa-plus"></i> Add
-                            Product</a>
+                                class="fa fa-plus"></i> @lang('admin.Add Product')</a>
                     </div>
                     @include('admin.inventory.product.index')
                 </div>
@@ -103,8 +97,7 @@
                 <div class="tab-pane fade" id="branches" role="tabpanel" aria-labelledby="product-tab">
                     <div class="p-1">
                         <button type="button" class="btn btn-info add-new" data-toggle="modal"
-                            data-target="#add_branch_modal" onclick="add_branches()"><i class="fa fa-plus"></i> Add
-                            Branches</button>
+                            data-target="#add_branch_modal" onclick="add_branches()"><i class="fa fa-plus"></i> @lang('admin.Add Branches')</button>
                     </div>
                     @include('admin.inventory.branch.index')
                 </div>

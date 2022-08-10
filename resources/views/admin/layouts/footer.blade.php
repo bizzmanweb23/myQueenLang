@@ -52,6 +52,12 @@
                 toastr.success('{{ Session::get('success') }}');
             @endif
         });
+		
+		 function changeLanguage(lang){
+		//sse.preventDefault();
+		//alert(lang);
+        window.location='{{url("change-language")}}/'+lang;
+	}
 </script>
 @yield('javascript')
 </body>

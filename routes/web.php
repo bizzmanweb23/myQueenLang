@@ -46,6 +46,7 @@ use App\Http\Controllers\User\UserPurchaseHistoryController;
 use App\Http\Controllers\User\UserWishlistController;
 use App\Http\Controllers\User\UserProductsController;
 use App\Http\Controllers\UserWalletPayController;
+use App\Http\Controllers\UpdateReferalContoller;
 use Illuminate\Support\Facades\URL;
 /*
 
@@ -71,17 +72,9 @@ Route::get('admin/login', [AdminAuthController::class, 'index'])->name('admin.lo
 Route::post('admin/login', [AdminAuthController::class, 'store'])->name('admin.login.store');
 
 
-Route::prefix('admin')->name('admin.')->middleware('auth:admin')->group(function () {
-    Route::resource('/Dashboard', AdminController::class)->names([
-        'index' => 'dashboard.index'
-    ]);
-	
-    Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
-});
-
-
 Route::group([   'middleware' => 'Language'], function () {
-	Route::get('/',[FrontendController::class, 'index'])->name('index');
+	
+	Route::get('/privacyPolicy',[FrontendController::class, 'privacyPolicy'])->name('privacyPolicy');
 	Route::get('/change-language/{lang}',[FrontendController::class, 'changeLang']);
 	Route::get('/about', [FrontendController::class, 'about']);
 	Route::get('/products', [FrontendController::class, 'products'])->name('shop');
@@ -254,36 +247,18 @@ Route::middleware(['auth'])->name('MLM.')->prefix('MLM')->group(function () {
     ]);
  
  });
-});
-
-// Placement
-
-
-// Route::get('/get_placement', [MlmUserController::class, 'get_placement'])->name('get_placement');
-// Route::get('/get_placement_id', [MlmUserController::class, 'get_placement_id'])->name('get_placement_id');
-
-
-//Auth::routes();
-
-
-
-//Route::get('/product/{id}', [MlmUserController::class, 'productdetails'])->name('Product-Details');
-
-
-
-
-
-
- // invoice
  
-// end invoice
-
-
-
-// all admin part here
-
-    //Route::get('admin', AdminController@ index);
-    Route::prefix('admin')->group(function () {
+ Route::any('/updateReferal', [UpdateReferalContoller::class, 'updateReferal'])->name('updateReferal');
+    Route::prefix('admin')->name('admin.')->middleware('auth:admin')->group(function () {
+    Route::resource('/Dashboard', AdminController::class)->names([
+        'index' => 'dashboard.index'
+    ]);
+	
+    Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
+});
+	Route::get('/',[FrontendController::class, 'index'])->name('index');
+ 
+     Route::prefix('admin')->group(function () {
             
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/shipping-charge', [AdminShippingController::class, 'ShippingView'])->name('Shippng-Charge');
@@ -519,6 +494,36 @@ Route::middleware(['auth'])->name('MLM.')->prefix('MLM')->group(function () {
     ]);	
 	// end withdraw bonus
 	});
+});
+
+// Placement
+
+
+// Route::get('/get_placement', [MlmUserController::class, 'get_placement'])->name('get_placement');
+// Route::get('/get_placement_id', [MlmUserController::class, 'get_placement_id'])->name('get_placement_id');
+
+
+//Auth::routes();
+
+
+
+//Route::get('/product/{id}', [MlmUserController::class, 'productdetails'])->name('Product-Details');
+
+
+
+
+
+
+ // invoice
+ 
+// end invoice
+
+
+
+// all admin part here
+
+    //Route::get('admin', AdminController@ index);
+
 
 Route::get('/d', function () {
     return view('demo');

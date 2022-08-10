@@ -13,19 +13,19 @@
 	      <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="genology-tab" data-toggle="tab" href="#affilatemarketing" role="tab"
-                        aria-controls="genology" aria-selected="true">Genology</a>
+                        aria-controls="genology" aria-selected="true">@lang('user.Genealogy')</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="direct-sponser-tab" data-toggle="tab" href="#showdirectsponsor"
-                        role="tab" aria-controls="directsponsor" aria-selected="false">Direct Sponser Bonus</a>
+                        role="tab" aria-controls="directsponsor" aria-selected="false">@lang('user.DirectBonus')</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="matching-bonus-tab" data-toggle="tab" href="#getmatchingbonusdetails" role="tab"
-                        aria-controls="matchingbonus" aria-selected="false">Matching Bonus</a>
+                        aria-controls="matchingbonus" aria-selected="false">@lang('mlm.bonus2')</a>
                 </li>
 				 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="leadership-bonus-tab" data-toggle="tab" href="#getleadershipbonusdetails" role="tab"
-                        aria-controls="leadershipbonus" aria-selected="false">Leadership Bonus</a>
+                        aria-controls="leadershipbonus" aria-selected="false">@lang('mlm.bonus3')</a>
                 </li>
             </ul>
                 <div class="tab-content bg-white" id="myTabContent">
@@ -35,12 +35,12 @@
                                data-show-export="true">
                            <thead>
                                 <tr>
-                                    <th data-field="user_id">User ID</th>
-                                    <th data-field="member_id">Member ID</th>
-                                    <th data-field="sponser_id">Sponser ID</th>
-                                    <th data-field="email_id">Email</th>
-						            <th data-field="details">Ranking</th>
-									<th data-field="id" data-formatter="usersAction">Action</th>
+                                    <th data-field="user_id">@lang('mlm.User ID')</th>
+                                    <th data-field="member_id">@lang('mlm.Member Id')</th>
+                                    <th data-field="sponser_id">@lang('mlm.Sponser Id')</th>
+                                    <th data-field="email_id">@lang('user.Email')</th>
+						            <th data-field="details">@lang('user.Ranking')</th>
+									<th data-field="id" data-formatter="usersAction">@lang('admin.Action')</th>
                                </tr>
                           </thead>
                                 <tbody>
@@ -54,11 +54,11 @@
                                    data-show-export="true">
                                 <thead>
                                     <tr>
-                                        <th data-field="user_id">User ID</th>
-                                        <th data-field="member_id">Member ID</th>
-                                        <th data-field="sponser_id">Sponser ID</th>
-                                        <th data-field="order_id">Order ID</th>
-                                        <th data-field="point" data-formatter="usd" data-footer-formatter="priceFormatter">USD</th>
+                                        <th data-field="user_id">@lang('mlm.User ID')</th>
+                                        <th data-field="member_id">@lang('mlm.Member Id')</th>
+                                        <th data-field="sponser_id">@lang('mlm.Sponser Id')</th>
+                                        <th data-field="order_id">@lang('order.Order Id')</th>
+                                        <th data-field="point" data-formatter="usd" data-footer-formatter="priceFormatter">@lang('auth.usd')</th>
                                    </tr>
                                </thead>
                                     <tbody>
@@ -71,11 +71,11 @@
                                        data-show-export="true">
                                     <thead>
                                         <tr>
-                                            <th data-field="sponsors_id">Sponser ID</th>
-                                            <th data-field="member_id">Member ID</th>
-                                            <th data-field="member_name">Member Name</th>
-                                            <th data-field="details">Ranking</th>
-						                    <th data-field="point" data-formatter="usd" data-footer-formatter="priceFormatter">USD</th>
+                                            <th data-field="sponsors_id">@lang('mlm.Sponser Id')</th>
+                                            <th data-field="member_id">@lang('mlm.Member Id')</th>
+                                            <th data-field="member_name">@lang('mlm.Member Name')</th>
+                                            <th data-field="details">@lang('user.Ranking')</th>
+						                    <th data-field="point" data-formatter="usd" data-footer-formatter="priceFormatter">@lang('auth.usd')</th>
                                        </tr>
                                    </thead>
                                         <tbody>
@@ -88,11 +88,11 @@
                                            data-show-export="true">
                                        <thead>
                                             <tr>
-                                                <th data-field="sponser_id">Sponser ID</th>
-                                                <th data-field="member_id">Member ID</th>
-                                                <th data-field="member_name">Sponser Name</th>
-                                                <th data-field="order_id">Order ID</th>
-                                                <th data-field="point" data-formatter="usd" data-footer-formatter="priceFormatter">USD</th>
+                                                <th data-field="sponser_id">@lang('mlm.Sponser Id')</th>
+                                                <th data-field="member_id">@lang('mlm.Member Id')</th>
+                                                <th data-field="member_name">@lang('admin.Sponser Name')</th>
+                                                <th data-field="order_id">@lang('order.Order Id')</th>
+                                                <th data-field="point" data-formatter="usd" data-footer-formatter="priceFormatter">@lang('auth.usd')</th>
                                            </tr>
                                        </thead>
                                             <tbody>
@@ -109,7 +109,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">View User Details</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">@lang('admin.View User Details')</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -119,60 +119,60 @@
 						 @csrf
 							<div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-									    <label>Ranking Type*</label>
+									    <label>@lang('admin.Ranking Type')*</label>
                                         <select name="rank_id" class="form-control bonus_details" id="ranking_type" readonly>
 										      <option></option>
-                                              <option value="1">Normal Member</option>         
-                                              <option value="2">Middle Class Member</option>      
-                                              <option value="3">High Class Member</option>											  
-                                              <option value="4">Diamond Member</option>											  
+                                              <option value="1">@lang('order.Normal Member')</option>         
+                                              <option value="2">@lang('order.Silver Member')</option>      
+                                              <option value="3">@lang('order.Gold Member')</option>											  
+                                              <option value="4">@lang('order.Diamond Member')</option>											  
                                           </select>
                                              <span id="ranking_type_error" style="color: red"></span>	
                                   </div>
                                     <div class="col-sm-6">
-									    <label for="" class="control-label">Sponser ID:</label>
+									    <label for="" class="control-label">@lang('mlm.Sponser Id'):</label>
                                         <input type="text" class="form-control form-control-user success" name="sponserID" id="sponserID" readonly>
 										<input type="hidden" name="id" id="userid">										
                                     </div>
                                 </div>
 								    <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-									    <label for="" class="control-label">Member ID:</label>
+									    <label for="" class="control-label">@lang('mlm.Member Id'):</label>
                                         <input type="text" class="form-control form-control-user success" name="memberID" id="memberID" readonly>
                                     </div>
                                     <div class="col-sm-6">
-									    <label for="" class="control-label">Email Address:</label>
+									    <label for="" class="control-label">@lang('admin.Email Address'):</label>
                                         <input type="text" class="form-control form-control-user success" name="emailAddress" id="emailAddress" readonly>
 										<span id="edit_user_email_error" style="color: red"></span>
                                     </div>
                                 </div>
 								    <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-									    <label for="" class="control-label">Total PV Points:</label>
+									    <label for="" class="control-label">@lang('admin.Total PV Points'):</label>
                                         <input type="text" class="form-control form-control-user success" name="pv_points" id="totalPv" readonly>
 										<span id="edit_user_pvpoints_error" style="color: red"></span>
                                     </div>
                                     <div class="col-sm-6">
-									    <label for="" class="control-label">Direct Bonus:</label>
+									    <label for="" class="control-label">@lang('mlm.bonus1'):</label>
                                         <input type="text" class="form-control form-control-user success" name="directBonus" id="directBonus" readonly>
 										<span id="edit_user_directbonus_error" style="color: red"></span>
                                     </div>
                                 </div>
 								    <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-									    <label for="" class="control-label">Matching Bonus:</label>
+									    <label for="" class="control-label">@lang('mlm.bonus2'):</label>
                                         <input type="text" class="form-control form-control-user success" name="matchingBonus" id="matchingBonus" readonly>
 										<span id="edit_user_matchingbonus_error" style="color: red"></span>
                                     </div>
                                     <div class="col-sm-6">
-									    <label for="" class="control-label">Leadership Bonus:</label>
+									    <label for="" class="control-label">@lang('mlm.bonus3'):</label>
                                         <input type="text" class="form-control form-control-user success" name="leadershipBonus" id="leadershipBonus" readonly>
 										<span id="edit_user_leadershipbonus_error" style="color: red"></span>
                                     </div>
                                 </div>
 								    <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-									    <label for="" class="control-label">Wallet:</label>
+									    <label for="" class="control-label">@lang('admin.Wallet'):</label>
                                         <input type="text" class="form-control form-control-user success" name="wallet" id="wallet" readonly>
 										<span id="wallet_error" style="color: red"></span>
                                     </div>

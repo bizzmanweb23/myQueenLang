@@ -33,7 +33,11 @@ class FrontendController extends Controller
         $product_data = Product::where('id', $id)->first();
         return view('frontend.products',compact('products'));
             }
-            
+    public function privacyPolicy()
+	{
+		return view('frontend.privacy');
+	}
+	
     public function changeLang($langcode){
        //echo 'Hello';die;
 	   //echo(session::get("lang_code"));
